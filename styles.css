@@ -1,10 +1,57 @@
 /* styles.css */
+@font-face {
+    font-family: 'fontello';
+    src: url('./font/fontello.eot?40730274');
+    src: url('./font/fontello.eot?40730274#iefix') format('embedded-opentype'),
+         url('./font/fontello.woff?40730274') format('woff'),
+         url('./font/fontello.ttf?40730274') format('truetype'),
+         url('./font/fontello.svg?40730274#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.demo-icon {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: never;
+    font-size: 2em;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+
+    /* You can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -27,7 +74,7 @@ body {
     transition: box-shadow 0.3s ease;
 }
 
-.d-flex{
+.d-flex {
     display: flex;
 }
 
@@ -116,7 +163,8 @@ button:active {
     width: 100%;
     margin: 30px 0;
     padding: 15px;
-    background-color: #1c1c1e; /* Dark background similar to the image */
+    background-color: #1c1c1e;
+    /* Dark background similar to the image */
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -131,7 +179,8 @@ button:active {
     padding: 12px;
     text-align: left;
     font-weight: 500;
-    color: #828282; /* Light gray for labels */
+    color: #828282;
+    /* Light gray for labels */
     border-bottom: 1px solid #2e2e32;
 }
 
@@ -139,33 +188,39 @@ button:active {
     padding: 12px;
     text-align: center;
     font-weight: 600;
-    color: #48e1a7; /* Light green color for values */
+    color: #48e1a7;
+    /* Light green color for values */
     border-bottom: 1px solid #2e2e32;
 }
 
 .history-table tr:last-child .history-label,
 .history-table tr:last-child .history-value {
-    border-bottom: none; /* Remove border from last row */
+    border-bottom: none;
+    /* Remove border from last row */
 }
-.success-icon{
+
+.success-icon {
     position: absolute;
     top: 0;
     right: 0;
 }
 
-.result-history-item{
+.result-history-item {
     border: 1px solid #ccc !important;
     border-radius: 16px;
     padding: 15px;
     margin: 8px 10px;
 }
-.main-result{
+
+.main-result {
     flex: 40%;
 }
-.history-result{
+
+.history-result {
     flex: 60%;
 }
-#history-content{
+
+#history-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -173,10 +228,14 @@ button:active {
 
 /* Sidebar styling */
 .Sidebar {
-    width: 100%; /* Width of the sidebar */
-    background-color: #333; /* Dark background color */
-    color: white; /* Text color */
-    position: fixed; /* Fixed position on the left side */
+    width: 100%;
+    /* Width of the sidebar */
+    background-color: #333;
+    /* Dark background color */
+    color: white;
+    /* Text color */
+    position: fixed;
+    /* Fixed position on the left side */
     bottom: 0;
     left: 0;
     display: flex;
@@ -204,7 +263,8 @@ button:active {
 }
 
 .sidebar-content nav ul li a {
-    color: #ddd; /* Lighter color for links */
+    color: #ddd;
+    /* Lighter color for links */
     text-decoration: none;
     font-size: 1.1em;
     display: block;
@@ -220,15 +280,89 @@ button:active {
 }
 
 
+
+/* Hero section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.hero button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: transparent;
+    border: 2px solid #4CAF50;
+    color: #4CAF50;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.hero-text span{
+    padding: 10px 20px;
+    background-color: #27b32b2c;
+    border: 2px solid #4CAF50;
+    color: #4CAF50;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.wallpaper img {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 900px;
+    opacity: 0.4;
+    border-radius: 10px;
+}
+
+
 @media only screen and (max-width: 1300px) {
     .container {
-      width: 90%;
+        width: 90%;
     }
-    .d-flex{
+
+    .d-flex {
         flex-direction: column;
     }
-    .history{
+
+    .history {
         padding-left: 0;
         padding-top: 20px;
     }
-  }
+}
+
+@media only screen and (max-width: 920px) {
+    .wallpaper img{
+        width: 90%;
+        background-size: cover;
+    }
+}
