@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VLSM Subnet Calculator</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="Sidebar"></div>
+        <div>
+            <h1>VLSM Subnet Calculator</h1>
+            <form id="vlsm-form">
+                <label for="ip">IP Address / CIDR (e.g., 1.1.0.0/22):</label>
+                <input type="text" id="ip" required>
+
+                <label for="subnets">Number of Subnets:</label>
+                <input type="number" id="subnets" min="1" required>
+
+                <button type="button" id="applyButton">Apply Subnets</button>
+
+                <div id="subnet-inputs-container"></div>
+                <button type="submit" id="calculateButton" style="display: none;">Calculate</button>
+            </form>
+
+            <div id="result" class="history-entry"></div>
+        </div>
+    </div>
+    <script src="../header.js"></script>
+    <script src="../scripts.js"></script>
+</body>
+
+</html>

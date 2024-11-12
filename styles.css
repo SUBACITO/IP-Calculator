@@ -1,0 +1,234 @@
+/* styles.css */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #161b19;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    margin-top: 50px;
+    width: 1300px;
+    padding: 20px;
+    background-color: #1e2423;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    transition: box-shadow 0.3s ease;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.container:hover {
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #1dd79b;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 20px;
+    color: #6e6e73;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: 1px solid #5d6e6b;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #c7c3c3;
+    background-color: #1e2423;
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #007aff;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #504e4e;
+    background-color: #1dd79b;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #3f3f41;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#subnet-inputs-container {
+    margin-top: 20px;
+}
+
+.subnet-input-group {
+    margin-bottom: 15px;
+}
+
+/* History section styling */
+.history {
+    /* width: 300px; */
+    /* border-left: 1px solid #ddd; */
+    padding-left: 20px;
+}
+
+.history h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.history-entry {
+    width: 100%;
+    margin: 30px 0;
+    padding: 15px;
+    background-color: #1c1c1e; /* Dark background similar to the image */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #d1d1d6;
+}
+
+.history-label {
+    padding: 12px;
+    text-align: left;
+    font-weight: 500;
+    color: #828282; /* Light gray for labels */
+    border-bottom: 1px solid #2e2e32;
+}
+
+.history-value {
+    padding: 12px;
+    text-align: center;
+    font-weight: 600;
+    color: #48e1a7; /* Light green color for values */
+    border-bottom: 1px solid #2e2e32;
+}
+
+.history-table tr:last-child .history-label,
+.history-table tr:last-child .history-value {
+    border-bottom: none; /* Remove border from last row */
+}
+.success-icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.result-history-item{
+    border: 1px solid #ccc !important;
+    border-radius: 16px;
+    padding: 15px;
+    margin: 8px 10px;
+}
+.main-result{
+    flex: 40%;
+}
+.history-result{
+    flex: 60%;
+}
+#history-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Sidebar styling */
+.Sidebar {
+    width: 100%; /* Width of the sidebar */
+    background-color: #333; /* Dark background color */
+    color: white; /* Text color */
+    position: fixed; /* Fixed position on the left side */
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Sidebar content */
+.sidebar-content h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.sidebar-content nav ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    display: flex;
+}
+
+.sidebar-content nav ul li {
+    margin: 10px 0;
+}
+
+.sidebar-content nav ul li a {
+    color: #ddd; /* Lighter color for links */
+    text-decoration: none;
+    font-size: 1.1em;
+    display: block;
+    padding: 10px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for links */
+.sidebar-content nav ul li a:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+
+@media only screen and (max-width: 1300px) {
+    .container {
+      width: 90%;
+    }
+    .d-flex{
+        flex-direction: column;
+    }
+    .history{
+        padding-left: 0;
+        padding-top: 20px;
+    }
+  }
