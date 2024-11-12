@@ -173,6 +173,7 @@ button:active {
     width: 100%;
     border-collapse: collapse;
     color: #d1d1d6;
+
 }
 
 .history-label {
@@ -344,6 +345,10 @@ button:active {
     border-radius: 10px;
 }
 
+.table-container {
+    overflow-x: auto;
+    width: 100%;
+}
 
 @media only screen and (max-width: 1300px) {
     .container {
